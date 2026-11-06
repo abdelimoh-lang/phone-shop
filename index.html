@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang='ar' dir='rtl'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>متجر الهواتف</title>
+<meta name='description' content='تسوّق أحدث الهواتف الذكية واطلب مباشرة عبر واتساب'>
+<meta name='theme-color' content='#ffffff'>
+<link rel='icon' href='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E📱%3C/text%3E%3C/svg%3E'>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap'>
+<link rel='stylesheet' href='/css/styles.css'>
+<link rel='stylesheet' href='/css/home.css'>
+</head>
+<body>
+<header class='top'>
+  <div class='wrap bar'>
+    <a class='brand' href='/'><span class='logo' aria-hidden='true'>📱</span><span id='storeName'>متجر الهواتف</span></a>
+    <nav class='nav' aria-label='التنقل'>
+      <a href='#brands'>الماركات</a>
+      <a href='#new'>جديدنا</a>
+      <a href='#offers'>العروض</a>
+      <a href='#products'>كل الهواتف</a>
+      <a href='#contact'>تواصل معنا</a>
+    </nav>
+    <button class='cart-btn' id='cartBtn' type='button' aria-label='السلة'>🛒 <span>السلة</span> <b id='cartCount'>0</b></button>
+  </div>
+</header>
+
+<section class='hero2' aria-label='عرض ترويجي'>
+  <h1 id='heroTitle' class='sr-only'>متجر الهواتف</h1>
+  <p id='heroTag' class='sr-only'>أحدث الهواتف الذكية بأفضل الأسعار</p>
+  <div class='scene-wrap' id='sceneWrap' aria-hidden='true'>
+    <div class='scene' id='scene'>
+      <div id='bg'></div>
+      <div id='orbs'></div>
+      <div id='dots'></div>
+      <div id='stage'></div>
+      <div id='title'><span class='l1' id='l1'>أحدث الهواتف</span><span class='l2' id='l2'>بأفضل الأسعار</span></div>
+      <div id='chips'></div>
+      <a id='cta' href='#products' tabindex='-1'><svg viewBox='0 0 32 32' fill='#fff'><path d='M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3 29l6.6-1.9c1.9 1.1 4 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm6.5 17.6c-.3.8-1.7 1.5-2.3 1.6-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.8-3.3-1.4-5.4-4.7-5.6-4.9-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5.3.6.9 2.1 1 2.3.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.2.8-.1.2-.3.9-1.1 1.2-1.4.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.7.3.8.5.1.2.1.9-.2 1.7z'/></svg><span>اطلب بنقرة عبر واتساب</span></a>
+      <div id='ring'></div>
+      <div id='bubble'>✓ تم تسجيل طلبك</div>
+      <div id='fade'></div>
+    </div>
+  </div>
+  <div class='hero-strip'>
+    <a class='btn primary' href='#products'>تصفّح الهواتف</a>
+    <a class='btn wa' id='heroWa' href='#products'>اطلب عبر واتساب</a>
+  </div>
+</section>
+
+<section class='sec' id='brands'>
+  <div class='wrap'>
+    <div class='sec-head'><div><h2>تسوّق حسب الماركة</h2><p>اختر ماركتك المفضلة وشاهد كل هواتفها</p></div></div>
+    <div class='brand-tiles' id='brandTiles'></div>
+  </div>
+</section>
+
+<section class='sec white' id='new'>
+  <div class='wrap'>
+    <div class='sec-head'><div><h2>جديدنا</h2><p>هواتف مختارة بعناية من متجرنا</p></div><a class='more' href='#products'>عرض كل الهواتف ‹</a></div>
+    <div class='new-grid' id='newGrid'><p class='msg'>جارٍ التحميل…</p></div>
+  </div>
+</section>
+
+<section class='sec' id='offers' hidden>
+  <div class='wrap'>
+    <div class='sec-head'><div><h2>أحدث العروض</h2><p>تخفيضات على هواتف مختارة</p></div><a class='more' href='#products'>كل المنتجات ‹</a></div>
+    <ul class='news' id='offersList'></ul>
+  </div>
+</section>
+
+<section class='sec white' id='products'>
+  <div class='wrap'>
+    <div class='sec-head'><div><h2>كل الهواتف</h2><p>ابحث وصفِّ حسب الماركة أو الحالة</p></div></div>
+    <section class='filters'>
+      <input id='search' type='search' placeholder='ابحث عن هاتف أو ماركة…' aria-label='بحث' maxlength='60'>
+      <select id='condSel' aria-label='الحالة'><option value=''>الكل (جديد ومستعمل)</option><option value='new'>جديد</option><option value='used'>مستعمل</option></select>
+    </section>
+    <div class='chips' id='brandChips'></div>
+    <div class='grid' id='grid' aria-live='polite'><p class='msg'>جارٍ تحميل المنتجات…</p></div>
+  </div>
+</section>
+
+<section class='about' id='about'>
+  <div class='wrap'>
+    <h2>هاتفك الجديد على بعد رسالة واحدة</h2>
+    <p>أسعار واضحة ومحدّثة، وتشكيلة من أشهر الماركات جديدة ومستعملة. اختر هاتفك، أرسل طلبك، ونتواصل معك عبر واتساب لتأكيده.</p>
+    <a class='btn wa big' id='aboutWa' href='#products'>تواصل عبر واتساب</a>
+  </div>
+</section>
+
+<footer class='foot2' id='contact'>
+  <div class='wrap'>
+    <div class='fcols'>
+      <div>
+        <strong id='fName'></strong>
+        <p id='fAddr'></p>
+        <p id='fHours'></p>
+      </div>
+      <div>
+        <h3>روابط</h3>
+        <ul>
+          <li><a href='#new'>جديدنا</a></li>
+          <li><a href='#offers'>العروض</a></li>
+          <li><a href='#products'>كل الهواتف</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>الماركات</h3>
+        <ul id='fBrands'></ul>
+      </div>
+      <div>
+        <h3>تواصل معنا</h3>
+        <p><a class='fwa' id='fWa' href='#products'>💬 واتساب</a></p>
+      </div>
+    </div>
+    <div class='fbottom'>© <span id='fYear'></span> <span id='fName2'></span></div>
+  </div>
+</footer>
+
+<a id='waFloat' class='wa-float' href='#' target='_blank' rel='noopener noreferrer' aria-label='تواصل عبر واتساب'>💬 واتساب</a>
+<dialog id='productDlg'></dialog>
+<dialog id='cartDlg'></dialog>
+<dialog id='checkoutDlg'></dialog>
+<dialog id='doneDlg'></dialog>
+<script type='module' src='/js/app.js'></script>
+<script type='module' src='/js/home.js'></script>
+</body>
+</html>
